@@ -1,23 +1,27 @@
 input.onGesture(Gesture.Shake, function () {
-    basic.showLeds(`
-        # # # # #
-        # . . . #
-        # . . . #
-        # . . . #
-        # # # # #
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # # # .
-        . # # # .
-        . # # # .
-        . . . . .
-        `)
-    basic.showLeds(`
-        # # . . #
-        # # . # .
-        . . # . .
-        # # . # .
-        # # . . #
-        `)
+    if (true) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+    } else if (false) {
+        basic.showLeds(`
+            # # . . #
+            # # . # .
+            . . # . .
+            # # . # .
+            # # . . #
+            `)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    }
 })
