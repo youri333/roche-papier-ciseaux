@@ -3,10 +3,10 @@ input.onButtonPressed(Button.A, function () {
     y = 0
 })
 input.onButtonPressed(Button.B, function () {
-    y = 1
+    y = -1
 })
 input.onGesture(Gesture.Shake, function () {
-    if (true) {
+    if (y == 0) {
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -14,7 +14,7 @@ input.onGesture(Gesture.Shake, function () {
             # . . . #
             # # # # #
             `)
-    } else if (y) {
+    } else if (y < 0) {
         basic.showLeds(`
             # # . . #
             # # . # .
