@@ -14,7 +14,7 @@ input.onGesture(Gesture.Shake, function () {
             # . . . #
             # # # # #
             `)
-    } else if (y < 0) {
+    } else if (y == -1) {
         basic.showLeds(`
             # # . . #
             # # . # .
