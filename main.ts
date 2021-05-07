@@ -1,11 +1,6 @@
 let y = 0
-input.onButtonPressed(Button.A, function () {
-    y = 0
-})
-input.onButtonPressed(Button.B, function () {
-    y = -1
-})
 input.onGesture(Gesture.Shake, function () {
+    y = randint(0, 2)
     if (y == 0) {
         basic.showLeds(`
             # # # # #
@@ -14,7 +9,7 @@ input.onGesture(Gesture.Shake, function () {
             # . . . #
             # # # # #
             `)
-    } else if (y == -1) {
+    } else if (y == 1) {
         basic.showLeds(`
             # # . . #
             # # . # .
