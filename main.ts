@@ -1,6 +1,6 @@
-let y = ""
+let y = 0
 input.onGesture(Gesture.Shake, function () {
-    radio.sendValue(y, 0)
+    radio.sendNumber(y)
     y = randint(0, 2)
     if (y == 0) {
         basic.showLeds(`
