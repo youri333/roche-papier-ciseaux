@@ -1,30 +1,31 @@
-let y = ""
-input.onGesture(Gesture.Shake, function () {
-    radio.sendValue(y, 0)
+y = 0
+
+def on_gesture_shake():
+    global y
+    radio.send_string("1")
     y = randint(0, 2)
-    if (y == 0) {
-        basic.showLeds(`
+    if y == 0:
+        basic.show_leds("""
             # # # # #
             # . . . #
             # . . . #
             # . . . #
             # # # # #
-            `)
-    } else if (y == 1) {
-        basic.showLeds(`
+            """)
+    elif y == 1:
+        basic.show_leds("""
             # # . . #
             # # . # .
             . . # . .
             # # . # .
             # # . . #
-            `)
-    } else {
-        basic.showLeds(`
+            """)
+    else:
+        basic.show_leds("""
             . . . . .
             . # # # .
             . # # # .
             . # # # .
             . . . . .
-            `)
-    }
-})
+            """)
+input.on_gesture(Gesture.SHAKE, on_gesture_shake)
